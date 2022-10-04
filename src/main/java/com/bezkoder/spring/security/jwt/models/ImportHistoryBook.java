@@ -16,15 +16,14 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@Entity
-//@Table(name = "import_history_book", uniqueConstraints={
-//        @UniqueConstraint(columnNames = {"book_id", "store_id"})})
+@Entity
+@Table(name = "import_history_book")
 public class ImportHistoryBook {
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int userId;
+    private String userName;
     private int quantity;
     private int storeBookId;
     private LocalDateTime createdAt;
